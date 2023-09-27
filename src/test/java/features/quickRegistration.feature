@@ -1,0 +1,52 @@
+#Author: your.email@your.domain.com
+#Keywords Summary :
+#Feature: List of scenarios.
+#Scenario: Business rule through list of steps with arguments.
+#Given: Some precondition step
+#When: Some key actions
+#Then: To observe outcomes or validation
+#And,But: To enumerate more Given,When,Then steps
+#Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
+#Examples: Container for s table
+#Background: List of steps run before each of the scenarios
+#""" (Doc Strings)
+#| (Data Tables)
+#@ (Tags/Labels):To group Scenarios
+#<> (placeholder)
+#""
+## (Comments)
+#Sample Feature Definition Template
+
+
+Feature: Quick Registration feature
+ @QckRegn
+  Scenario Outline: Successful Quick Registration
+    
+    Given User is on HMS login Page
+    When User give <User> and <Password>
+    And select "DISTRICT MODEL HOSPITAL PEROORKADA" and "GENERAL MEDICINE"
+    And click Signin
+    And Ignore Last Login
+    Then User will be redirected to HomePage 
+    Then Click on Reception and Quick Registration 
+    Then Fill the patient name
+    And Select "Male" 
+    And Enter <Age> 
+    And Choose "GENERAL MEDICINE"
+    And Click Submit
+    Then Success message will be displayed 
+    
+ 
+    Examples:
+       
+ | User    | Password | Gender | Age |
+ |10000T24 | 10000T24 | Male | 44 |   
+      
+   
+     
+     
+   
+   
+
+    
+  
