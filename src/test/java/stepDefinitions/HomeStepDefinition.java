@@ -43,10 +43,12 @@ public void user_will_be_redirected_to_home_page() throws InterruptedException {
 	
 	
 	
-	Boolean Display = homePageObjects.isLoggedin();
-	
-	
-	System.out.println("Home page  :"+Display);
+	//Boolean Display = homePageObjects.isLoggedin();
+	//System.out.println("Home page  :"+Display);
+	assert homePageObjects.isLoggedin() : "User is not logged in";
+
+	System.out.println("Home page: " + homePageObjects.isLoggedin());
+
 	
 	
 	
