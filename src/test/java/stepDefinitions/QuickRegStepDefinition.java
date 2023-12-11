@@ -85,10 +85,10 @@ public void click_submit() {
 	
 }
 @Then("Success message will be displayed")
-public void success_message_will_be_displayed() {
+public void success_message_will_be_displayed() throws InterruptedException {
 	
 	
-	
+	    Thread.sleep(1000);
 		Assert.assertTrue(quickRegistration.QuickRegnCheck());
 	
 }
